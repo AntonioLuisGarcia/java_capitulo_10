@@ -25,6 +25,12 @@ public class Eurocoin {
                     this.posicion = posiciones[(int)(Math.random()*2)];
 
                 }while(this.valor != ultimoValor && this.posicion != ultimaPosicion);
+
+                ultimoValor = this.valor;
+                ultimaPosicion = this.posicion;
+            }else{
+                ultimoValor = this.valor;
+                ultimaPosicion = this.posicion;
             }
         }
     }
