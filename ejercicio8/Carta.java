@@ -5,7 +5,7 @@ public class Carta {
     private int numero;
     private String palo;
 
-    private static String[] palos = {"oros","copas","espadas0","bastos"}; 
+    private static String[] palos = {"oros","copas","espadas","bastos"}; 
 
     public Carta(){
         this.numero = (int)(Math.random()*12+1);
