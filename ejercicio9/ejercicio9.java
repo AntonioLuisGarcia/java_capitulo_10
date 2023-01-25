@@ -1,5 +1,6 @@
-package ejercicio9.ejercicio9;
+package ejercicio9;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class ejercicio9{
@@ -13,6 +14,8 @@ public class ejercicio9{
             }while(c.contains(cartaAux));
             c.add(cartaAux);
         }
+
+        Collections.sort(c);
 
         for(Carta d : c){
             System.out.println(d);

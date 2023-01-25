@@ -1,8 +1,8 @@
-package ejercicio9.ejercicio9;
+package ejercicio9;
 
-public class Carta {
+public class Carta implements Comparable<Carta> {
     
-    private int numero;
+    private Integer numero;
     private String palo;
 
     private static String[] palos = {"oros","copas","espadas","bastos"}; 
@@ -18,6 +18,11 @@ public class Carta {
 
     public String getPalo() {
         return palo;
+    }
+
+    @Override
+    public String toString(){
+        return numero + " de " + palo;
     }
 
     @Override
@@ -44,23 +49,12 @@ public class Carta {
     }
     
     @Override
-    public String toString(){
-        return numero + " de " + palo;
-    }
+    public int compareTo(Carta c) {
 
-    public int compareTo(Carta c){
-
-        if(this.getPalo().equals(c.getPalo())){
-            if(this.numero > c.numero){
-                return 1;
-            }else if(this.numero < c.numero){
-                return -1;
-            }else{
-                return 0;
-            }
-        }else{
-            return this.palo.compareTo(c.getPalo());
+        if (palo.equals(c.getPalo())) {
+            return numero.compareTo(c.getNumero());
+        } else {
+            return palo.compareTo(c.getPalo());
         }
     }
-    
 }
