@@ -1,0 +1,66 @@
+package ejercicio9.ejercicio9;
+
+public class Carta {
+    
+    private int numero;
+    private String palo;
+
+    private static String[] palos = {"oros","copas","espadas","bastos"}; 
+
+    public Carta(){
+        this.numero = (int)(Math.random()*12+1);
+        this.palo = palos[(int)(Math.random()*4)];
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getPalo() {
+        return palo;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o == null){
+            return false;
+        }
+
+        if(o.getClass() != getClass()){
+            return false;
+        }
+
+        Carta c = (Carta) o;
+
+        if(c.getNumero() != this.getNumero()){
+            return false;
+        }
+
+        if(c.getPalo().equals(this.getPalo())){
+            return false;
+        }
+
+        return true;
+    }
+    
+    @Override
+    public String toString(){
+        return numero + " de " + palo;
+    }
+
+    public int compareTo(Carta c){
+
+        if(this.getPalo().equals(c.getPalo())){
+            if(this.numero > c.numero){
+                return 1;
+            }else if(this.numero < c.numero){
+                return -1;
+            }else{
+                return 0;
+            }
+        }else{
+            return this.palo.compareTo(c.getPalo());
+        }
+    }
+    
+}
