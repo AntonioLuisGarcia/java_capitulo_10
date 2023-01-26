@@ -23,6 +23,12 @@ public class ejercicio9{
             c.add(cartaAux);
         }
 
+        for(Carta d : c){
+            System.out.println(d);
+        }
+
+        System.out.println();
+        
         Collections.sort(c);
 
         for(Carta d : c){
