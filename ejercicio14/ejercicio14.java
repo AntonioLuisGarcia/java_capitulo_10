@@ -12,7 +12,7 @@ package ejercicio14;
  * va a intentar comprar un producto que no existe. Utiliza un diccionario para almacenar los nombres y precios de los
  * productos y una o varias listas para almacenar la compra que realiza el usuario.
  * 
- * 
+ * @author Antonio Luis Garcia 
  */
 
 import java.util.ArrayList;
