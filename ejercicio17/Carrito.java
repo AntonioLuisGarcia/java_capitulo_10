@@ -6,8 +6,8 @@ public class Carrito {
 
     private ArrayList<Elemento> carro;
 
-    public Carrito(ArrayList<Elemento> carro){
-        this.carro = carro;
+    public Carrito(){
+        carro = new ArrayList<>();
     }
 
     public void agrega(Elemento e){
@@ -26,4 +26,13 @@ public class Carrito {
         }
         return total;
     }
+
+    @Override
+    public String toString() {
+        String pinta = "Contenido del carrito\n=====================\n";
+        for (Elemento e : carro) {
+        pinta += e + "\n";
+        }
+        return pinta;
+  }
 }
