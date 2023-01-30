@@ -1,5 +1,4 @@
 package ejercicio22;
-
 import java.util.ArrayList;
 
 public class CuentaCorriente{
