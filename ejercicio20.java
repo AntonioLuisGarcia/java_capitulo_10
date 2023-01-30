@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
-public class ejercicio19 {
+//
+public class ejercicio20 {
     public static void main(String[] args) {
 
         HashMap<String, String> diccionario = new HashMap<String, String>();
@@ -18,6 +18,8 @@ public class ejercicio19 {
         diccionario.put("grande", "big");
 
         String palabra = "";
+        String traduccion = "";
+        String sinonimo = "";
         Scanner sc = new Scanner(System.in);
 
         do{
@@ -27,11 +29,20 @@ public class ejercicio19 {
             if(!diccionario.containsKey(palabra)){
                 
                 System.out.println("No conozco esa palabra");
+                System.out.println("Diga su traducion al ingles: ");
+                traduccion = sc.nextLine();
+
+                diccionario.put(palabra,traduccion);
             }else{
 
                 if(!sinonimo(palabra,diccionario)){
 
                     System.out.println("No hay sinonimos");
+                    System.out.println("Escriba un sinonimo");
+                    sinonimo = sc.nextLine();
+
+                    diccionario.put(sinonimo,diccionario.get(palabra));
+
                 }else{
                     System.out.print("Los sinonimos son: ");
 
@@ -62,7 +73,7 @@ public class ejercicio19 {
         String sinonim = h.get(palabra);
         int contador = 0;
 
-        for (Map.Entry<String,String>  entrada : h.entrySet()) {
+        for (Map.Entry<String,String> entrada : h.entrySet()) {
           if (entrada.getValue().equals(sinonim)) {
             contador++;
           }
