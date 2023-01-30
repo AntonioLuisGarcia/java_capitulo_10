@@ -9,6 +9,7 @@ package ejercicio22;
  * 
  * @author Antonio Luis Garcia
  */
+
 public class ejercicio22 {
     public static void main(String[] args) {
 
