@@ -2,6 +2,7 @@ package ejerciciosExtra.extra1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Universidad {
     private HashMap<String,Estudiante> estudiantes;
@@ -43,16 +44,24 @@ public class Universidad {
     }
 
     public ArrayList<Estudiante> listarEstudiantesPorEdad(int edad){
+
         ArrayList<Estudiante> e = listarEstudiantes();
         e.removeIf((estudent)->estudent.getEdad()!=edad);
+
         return e;
     }
 
     public void mostrarLista(){
         ArrayList<Estudiante> e = listarEstudiantes();
+        e.forEach(estudent -> System.out.println(estudent));
+    }
 
-        for(Estudiante estudiante : e){
-            System.out.println(estudiante);
+    public void mostrarListaUni(){
+
+        for(Map.Entry<String,Estudiante> est : estudiantes.entrySet()){
+            System.out.printf("%s con id: %s",est.getValue().getNombre(),est.getKey());
+            System.out.println();
         }
     }
+
 }

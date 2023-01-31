@@ -15,5 +15,7 @@ public class pruebaUniversidad {
         uni.eliminarEstudiantePorMatricula("1");
         System.out.println();
         uni.mostrarLista();
+        System.out.println();
+        uni.mostrarListaUni();
     }
 }
